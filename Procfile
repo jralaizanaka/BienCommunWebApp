@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run Creeformulaire.py
+web: sh setup.sh && streamlit run EnvoiFormulaire.py
