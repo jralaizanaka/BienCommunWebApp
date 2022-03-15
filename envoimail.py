@@ -25,10 +25,10 @@ def app():
         if submit_button1:
             dateCompletDuJour = str(dt.datetime.today().isoformat())[0:16]
 
-            HOST = "smtp.gmail.com"
+            HOST ='smtp-mail.outlook.com'
             SUBJECT = "Nouveau Prospect"
             TO = "j.ralaizanaka@gmail.com"
-            FROM = "j.ralaizanaka@gmail.com"
+            FROM = "j.ralaizanaka@outlook.fr"
 
             message1 = "Date: " + dateCompletDuJour + "\n" + "Nom: " + nom + "\n" + "Prenom: " + prénom + "\n" + \
                        "Date de naissance: " + ddn + "\n" + \
@@ -48,8 +48,8 @@ def app():
                 "",
                 message1
                 ))
-            port = 465
-            username="j.ralaizanaka@gmail.com"
+            port = 587
+            username="j.ralaizanaka@outlook.fr"
             password="fanomezana90"
             server = smtplib.SMTP_SSL(HOST, port)
             server.login(username, password)
