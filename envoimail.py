@@ -1,6 +1,7 @@
 import streamlit as st
 import smtplib, ssl
 import datetime as dt
+import yagmail
 
 def app():
     st.image("ImageBC.png")
@@ -25,10 +26,10 @@ def app():
         if submit_button1:
             dateCompletDuJour = str(dt.datetime.today().isoformat())[0:16]
 
-            HOST ='smtp-mail.outlook.com'
-            SUBJECT = "Nouveau Prospect"
-            TO = "j.ralaizanaka@gmail.com"
-            FROM = "j.ralaizanaka@outlook.fr"
+            user1 = "j.ralaizanakaheroku@gmail.com"
+            mypassword = "fanomezana90"
+            mailto = "j.ralaizanaka@gmail.com"
+
 
             message1 = "Date: " + dateCompletDuJour + "\n" + "Nom: " + nom + "\n" + "Prenom: " + prénom + "\n" + \
                        "Date de naissance: " + ddn + "\n" + \
@@ -41,22 +42,8 @@ def app():
             #text2 = "Prenom: "+prénom+ "\n"
            # text3 = "Date de naissance:"+ddn+ "\n"
 
-            BODY = "\r\n".join((
-                "From: %s" % FROM,
-                "To: %s" % TO,
-                "Subject: %s" % SUBJECT ,
-                "",
-                message1
-                ))
-            port = 587
-            username="j.ralaizanaka@outlook.fr"
-            password="fanomezana90"
-            server = smtplib.SMTP_SSL(HOST, port)
-            server.login(username, password)
-            server.sendmail(FROM, [TO], BODY)
-            server.quit()
+            yag = yagmail.SMTP(user=user1, password=mypassword)
+            # sending the email
+            yag.send(to=mailto, subject='Nouveau prospect', contents=message1)
 
 
-if __name__ == '__main__':
-
-    app()
