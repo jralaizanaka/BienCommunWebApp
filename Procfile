@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run EnvoiFormulaire.py
+web: sh setup.sh && streamlit run ApliWeb18mars.py
