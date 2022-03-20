@@ -43,8 +43,8 @@ def app():
             dateCompletDuJour = str(dt.datetime.today().isoformat())[0:16]
 
             user1 = "contactbiencommun@gmail.com"
-            mypassword = "2022Succes."
-            mailto = "contactbiencommun@gmail.com"
+            mypassword = "fanomezana90"
+            mailto = "j.ralaizanaka@gmail.com"
 
             message1 = "Date: " + dateCompletDuJour + "\n" + "Nom: " + nom + "\n" + "Prenom: " + prénom + "\n" + \
                        "Date de naissance: " + ddn + "\n" + \
@@ -58,10 +58,10 @@ def app():
 
             st.success("Vous pouvez passer à la phase TEST")
 
-    with st.container():
-        video_file = open('prezStreamlit.mp4', 'rb')
-        video_bytes = video_file.read()
-        st.video(video_bytes)
+    #with st.container():
+        #video_file = open('prezStreamlit.mp4', 'rb')
+        #video_bytes = video_file.read()
+       # st.video(video_bytes)
     # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     #                                    ETAPE2
     # """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
